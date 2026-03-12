@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sejal Dahal — AI & ML Enthusiast</title>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -26,6 +28,7 @@
     }
 
     html { scroll-behavior: smooth; }
+      section { scroll-margin-top: 120px; }
     body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--mid); overflow-x: hidden; }
     ::-webkit-scrollbar { width: 3px; }
     ::-webkit-scrollbar-track { background: var(--paper); }
@@ -63,13 +66,10 @@
     .btn-ghost:hover { border-color: var(--rose); color: var(--rose); }
     .hl { color: var(--rose); font-weight: 500; }
 
-    /* ── Reveal on scroll ── */
     .rev { opacity: 0; transform: translateY(28px); transition: opacity .7s, transform .7s; }
     .rev.vis { opacity: 1; transform: translateY(0); }
 
-    /* ══════════════════════════════════════
-       NAV
-    ══════════════════════════════════════ */
+    /* NAV */
     .nav-wrap {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       transition: background .3s, box-shadow .3s;
@@ -148,9 +148,7 @@
       .nav-mobile-toggle { display: flex; }
     }
 
-    /* ══════════════════════════════════════
-       HERO
-    ══════════════════════════════════════ */
+    /* HERO */
     #hero {
       min-height: 100vh;
       display: flex; flex-direction: column;
@@ -227,9 +225,7 @@
     }
     @keyframes scrollpulse { 0%,100%{ opacity: .3; } 50%{ opacity: 1; } }
 
-    /* ══════════════════════════════════════
-       ABOUT
-    ══════════════════════════════════════ */
+    /* ABOUT */
     #about { background: var(--white); }
     .about-layout {
       display: grid; grid-template-columns: 240px 1fr;
@@ -265,9 +261,7 @@
     }
     .stat-l { font-size: .7rem; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; margin-top: 2px; }
 
-    /* ══════════════════════════════════════
-       SKILLS
-    ══════════════════════════════════════ */
+    /* SKILLS */
     #skills { background: var(--paper); }
     .skills-grid {
       display: grid;
@@ -296,9 +290,7 @@
     }
     .skill-pill:hover { background: var(--rose); color: var(--white); border-color: var(--rose); }
 
-    /* ══════════════════════════════════════
-       PROJECTS
-    ══════════════════════════════════════ */
+    /* PROJECTS */
     #projects { background: var(--white); }
     .filter-row { display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
     .f-btn {
@@ -351,9 +343,7 @@
     .proj-link:hover { gap: .7rem; }
     .proj-link svg { flex-shrink: 0; }
 
-    /* ══════════════════════════════════════
-       EXPERIENCE
-    ══════════════════════════════════════ */
+    /* EXPERIENCE */
     #experience { background: var(--paper); }
     .timeline { max-width: 700px; }
     .tl-item {
@@ -375,9 +365,7 @@
     }
     .tl-body { font-size: .84rem; color: var(--muted); line-height: 1.8; font-weight: 300; }
 
-    /* ══════════════════════════════════════
-       CERTIFICATES & ACHIEVEMENTS
-    ══════════════════════════════════════ */
+    /* CERTIFICATES */
     #certificates { background: var(--white); }
     .cred-split {
       display: grid; grid-template-columns: 1fr 1fr;
@@ -410,7 +398,6 @@
     .cert-by   { font-size: .72rem; color: var(--muted); margin-top: 1px; }
     .cert-yr   { font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: 1.5px; color: var(--rose); flex-shrink: 0; }
 
-    /* Hackathon panel */
     .hack-panel {
       background: var(--paper); border: 1px solid var(--border);
       border-radius: 8px; padding: 1.8rem;
@@ -443,7 +430,6 @@
     }
     .hack-panel:hover .hack-cta { gap: .7rem; }
 
-    /* Hackathon overlay */
     .hack-overlay {
       position: fixed; inset: 0; z-index: 998;
       background: var(--cream); overflow-y: auto;
@@ -512,9 +498,7 @@
     .hack-card-desc { font-size: .82rem; color: var(--mid); line-height: 1.7; font-weight: 300; }
     .hack-card-hint { font-family: 'DM Mono', monospace; font-size: .58rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: .6rem; }
 
-    /* ══════════════════════════════════════
-       CONTACT
-    ══════════════════════════════════════ */
+    /* CONTACT */
     #contact { background: var(--paper); }
     .contact-layout { display: grid; grid-template-columns: 1fr 360px; gap: 4rem; align-items: start; }
     @media(max-width:700px){ .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; } }
@@ -528,9 +512,7 @@
     .c-label strong { display: block; font-size: .86rem; color: var(--ink); margin-bottom: 1px; }
     .c-label span { font-size: .74rem; color: var(--muted); }
 
-    /* ══════════════════════════════════════
-       MODAL (Contact Form)
-    ══════════════════════════════════════ */
+    /* ══ CONTACT FORM MODAL (updated) ══ */
     .form-overlay {
       position: fixed; inset: 0; z-index: 999;
       background: rgba(26,18,24,.72); backdrop-filter: blur(10px);
@@ -577,12 +559,48 @@
       padding: 14px; border-radius: 100px;
       background: var(--ink); color: var(--cream);
       border: none; cursor: pointer; transition: background .22s;
+      display: flex; align-items: center; justify-content: center; gap: .5rem;
     }
-    .form-submit:hover { background: var(--rose); }
+    .form-submit:hover:not(:disabled) { background: var(--rose); }
+    .form-submit:disabled { opacity: .65; cursor: not-allowed; }
 
-    /* ══════════════════════════════════════
-       LIGHTBOX
-    ══════════════════════════════════════ */
+    /* Spinner */
+    .spinner {
+      width: 14px; height: 14px; border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.3);
+      border-top-color: #fff;
+      animation: spin .7s linear infinite;
+      display: none;
+    }
+    .form-submit.loading .spinner { display: inline-block; }
+    .form-submit.loading .btn-text { display: none; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Toast notification */
+    .toast {
+      position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(20px);
+      z-index: 1100; padding: .85rem 1.5rem; border-radius: 100px;
+      font-family: 'DM Mono', monospace; font-size: .72rem; letter-spacing: 1.5px;
+      text-transform: uppercase; pointer-events: none;
+      opacity: 0; transition: all .35s cubic-bezier(.22,1,.36,1);
+      white-space: nowrap;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .toast.success { background: var(--ink); color: var(--cream); }
+    .toast.error   { background: #c0392b; color: #fff; }
+
+    /* Form success state */
+    .form-success {
+      display: none; flex-direction: column; align-items: center;
+      text-align: center; padding: 1rem 0 .5rem; gap: .8rem;
+    }
+    .form-success.show { display: flex; }
+    .form-success-icon { font-size: 3rem; }
+    .form-success-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 600; color: var(--ink); }
+    .form-success-msg { font-size: .84rem; color: var(--muted); line-height: 1.7; font-weight: 300; }
+    .form-body { transition: opacity .3s; }
+
+    /* LIGHTBOX */
     .lightbox-overlay {
       position: fixed; inset: 0; z-index: 1000;
       background: rgba(26,18,24,.88); backdrop-filter: blur(8px);
@@ -603,9 +621,7 @@
     .lightbox-close  { font-family: 'DM Mono', monospace; font-size: .68rem; letter-spacing: 2px; text-transform: uppercase; background: none; border: 1px solid var(--border); color: var(--mid); padding: 6px 14px; border-radius: 100px; cursor: pointer; transition: all .2s; }
     .lightbox-close:hover { border-color: var(--rose); color: var(--rose); }
 
-    /* ══════════════════════════════════════
-       FOOTER
-    ══════════════════════════════════════ */
+    /* FOOTER */
     .site-footer {
       border-top: 1px solid var(--border); padding: 1.8rem 3rem;
       display: flex; justify-content: space-between; align-items: center;
@@ -613,14 +629,21 @@
     }
     .footer-sig { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; color: var(--muted); }
     .footer-sig span { color: var(--rose); }
+
+    /* Setup note banner */
+    .setup-note {
+      background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px;
+      padding: .7rem 1rem; margin-bottom: 1rem;
+      font-size: .78rem; color: #7a5c00; line-height: 1.6; display: none;
+    }
   </style>
 </head>
 <body>
 
-<!-- ══════════════════ NAV ══════════════════ -->
+<!-- NAV -->
 <nav class="nav-wrap" id="navbar">
   <div class="nav-identity">
-    <div class="nav-avatar">-</div>
+    <div class="nav-avatar">✨</div>
     <div>
       <div class="nav-name">Sejal <span>Dahal</span></div>
       <div class="nav-subtitle">🌸 BE Computer Engineer 🌸</div>
@@ -628,12 +651,12 @@
   </div>
   <div class="nav-links-bar">
     <ul class="nav-links-list">
-      <li><a onclick="scrollTo('about')">About</a></li>
-      <li><a onclick="scrollTo('skills')">Skills</a></li>
-      <li><a onclick="scrollTo('projects')">Projects</a></li>
-      <li><a onclick="scrollTo('experience')">Experience</a></li>
-      <li><a onclick="scrollTo('certificates')">Certificates</a></li>
-      <li><a onclick="scrollTo('contact')">Contact</a></li>
+      <li><a href="#about" onclick="scrollToSection('about'); return false;">About</a></li>
+      <li><a href="#skills" onclick="scrollToSection('skills'); return false;">Skills</a></li>
+      <li><a href="#projects" onclick="scrollToSection('projects'); return false;">Projects</a></li>
+      <li><a href="#experience" onclick="scrollToSection('experience'); return false;">Experience</a></li>
+      <li><a href="#certificates" onclick="scrollToSection('certificates'); return false;">Certificates</a></li>
+      <li><a href="#contact" onclick="scrollToSection('contact'); return false;">Contact</a></li>
     </ul>
     <a href="resume.pdf" class="nav-resume-pill">↓ Resume</a>
     <button class="nav-mobile-toggle" onclick="toggleMobileNav()" aria-label="Menu">
@@ -641,17 +664,17 @@
     </button>
   </div>
   <div class="nav-mobile-drawer" id="mobileDrawer">
-    <a onclick="scrollTo('about');closeMobileNav()">About</a>
-    <a onclick="scrollTo('skills');closeMobileNav()">Skills</a>
-    <a onclick="scrollTo('projects');closeMobileNav()">Projects</a>
-    <a onclick="scrollTo('experience');closeMobileNav()">Experience</a>
-    <a onclick="scrollTo('certificates');closeMobileNav()">Certificates</a>
-    <a onclick="scrollTo('contact');closeMobileNav()">Contact</a>
+    <a href="#about" onclick="scrollToSection('about');closeMobileNav(); return false;">About</a>
+    <a href="#skills" onclick="scrollToSection('skills');closeMobileNav(); return false;">Skills</a>
+    <a href="#projects" onclick="scrollToSection('projects');closeMobileNav(); return false;">Projects</a>
+    <a href="#experience" onclick="scrollToSection('experience');closeMobileNav(); return false;">Experience</a>
+    <a href="#certificates" onclick="scrollToSection('certificates');closeMobileNav(); return false;">Certificates</a>
+    <a href="#contact" onclick="scrollToSection('contact');closeMobileNav(); return false;">Contact</a>
     <a href="resume.pdf" style="color:var(--rose)">↓ Resume</a>
   </div>
 </nav>
 
-<!-- ══════════════════ HERO ══════════════════ -->
+<!-- HERO -->
 <section id="hero">
   <div class="hero-blob-r"></div>
   <div class="hero-blob-l"></div>
@@ -662,15 +685,15 @@
     <div class="hero-title">AI &amp; Machine Learning Enthusiast</div>
     <p class="hero-tagline">Building intelligent systems with AI.</p>
     <div class="hero-btns">
-      <button class="btn-fill" onclick="scrollTo('projects')">View Projects</button>
-      <button class="btn-ghost" onclick="scrollTo('contact')">Contact Me</button>
+      <button class="btn-fill" onclick="scrollToSection('projects')">View Projects</button>
+      <button class="btn-ghost" onclick="scrollToSection('contact')">Contact Me</button>
       <a href="resume.pdf" class="btn-ghost">↓ Resume</a>
     </div>
   </div>
   <div class="hero-scroll-hint"><div class="scroll-line"></div></div>
 </section>
 
-<!-- ══════════════════ ABOUT ══════════════════ -->
+<!-- ABOUT -->
 <section id="about">
   <div class="container">
     <div class="rev" data-rev>
@@ -679,8 +702,7 @@
       <div class="about-layout">
         <div class="about-portrait-wrap">
           <div class="about-portrait">
-            <!-- Replace the src below with your actual photo path e.g. photos/pinkbg.png -->
-               <img src="photos/pinkbg.png" alt="Sejal Dahal" />
+            <img src="photos/pinkbg.png" alt="Sejal Dahal" />
           </div>
           <p class="about-portrait-caption">Sejal Dahal</p>
         </div>
@@ -707,7 +729,7 @@
   </div>
 </section>
 
-<!-- ══════════════════ SKILLS ══════════════════ -->
+<!-- SKILLS -->
 <section id="skills">
   <div class="container">
     <div class="rev" data-rev>
@@ -749,7 +771,7 @@
   </div>
 </section>
 
-<!-- ══════════════════ PROJECTS ══════════════════ -->
+<!-- PROJECTS -->
 <section id="projects">
   <div class="container">
     <div class="section-kicker">Projects</div>
@@ -760,26 +782,22 @@
       <button class="f-btn" onclick="filterProjects('Data Analysis', this)">Data Analysis</button>
       <button class="f-btn" onclick="filterProjects('Flutter', this)">Flutter</button>
     </div>
-    <div class="projects-grid" id="projectsGrid">
-      <!-- Rendered by JS -->
-    </div>
+    <div class="projects-grid" id="projectsGrid"></div>
   </div>
 </section>
 
-<!-- ══════════════════ EXPERIENCE ══════════════════ -->
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
     <div class="rev" data-rev>
       <div class="section-kicker">Experience</div>
       <h2 class="section-heading">Journey so far</h2>
-      <div class="timeline" id="timeline">
-        <!-- Rendered by JS -->
-      </div>
+      <div class="timeline" id="timeline"></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════ CERTIFICATES ══════════════════ -->
+<!-- CERTIFICATES -->
 <section id="certificates">
   <div class="container">
     <div class="rev" data-rev>
@@ -788,7 +806,7 @@
       <div class="cred-split">
         <div>
           <p class="cred-col-head">🎓 Certificates</p>
-          <div class="certs-list" id="certsList"><!-- Rendered by JS --></div>
+          <div class="certs-list" id="certsList"></div>
         </div>
         <div>
           <p class="cred-col-head">🏆 Hackathons</p>
@@ -808,7 +826,7 @@
   </div>
 </section>
 
-<!-- ══════════════════ CONTACT ══════════════════ -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <div class="rev" data-rev>
@@ -848,12 +866,12 @@
   </div>
 </section>
 
-<!-- ══════════════════ FOOTER ══════════════════ -->
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-sig">Sejal <span>Dahal</span></div>
 </footer>
 
-<!-- ══════════════════ HACKATHON OVERLAY ══════════════════ -->
+<!-- HACKATHON OVERLAY -->
 <div class="hack-overlay" id="hackOverlay">
   <div class="hack-page">
     <button class="hack-page-back" onclick="closeHackOverlay()">← Back</button>
@@ -864,7 +882,7 @@
         <span class="hack-section-name">Won</span>
         <span class="hack-section-count">4 events</span>
       </div>
-      <div class="hack-grid" id="wonGrid"><!-- Rendered by JS --></div>
+      <div class="hack-grid" id="wonGrid"></div>
     </div>
     <div class="hack-section">
       <div class="hack-section-header">
@@ -872,12 +890,12 @@
         <span class="hack-section-name">Participated</span>
         <span class="hack-section-count">5 events</span>
       </div>
-      <div class="hack-grid" id="participatedGrid"><!-- Rendered by JS --></div>
+      <div class="hack-grid" id="participatedGrid"></div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════ LIGHTBOX ══════════════════ -->
+<!-- LIGHTBOX -->
 <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
   <div class="lightbox-box" onclick="event.stopPropagation()">
     <img class="lightbox-img" id="lightboxImg" src="" alt="" />
@@ -891,30 +909,142 @@
   </div>
 </div>
 
-<!-- ══════════════════ CONTACT FORM MODAL ══════════════════ -->
+<!-- ══════════════════ CONTACT FORM MODAL (EmailJS) ══════════════════ -->
 <div class="form-overlay" id="formModal" onclick="closeFormModal()">
   <div class="form-box" onclick="event.stopPropagation()">
     <button class="form-close" onclick="closeFormModal()">✕</button>
-    <p class="form-title">Say hello</p>
-    <p class="form-sub">I'll get back to you as soon as I can.</p>
-    <div class="form-group">
-      <label class="form-label">Your name</label>
-      <input class="form-input" type="text" id="formName" placeholder="xyz" />
+
+    <!-- Normal form body -->
+    <div class="form-body" id="formBody">
+      <p class="form-title">Say hello</p>
+      <p class="form-sub">I'll get back to you as soon as I can.</p>
+
+      <!-- ⚠️ Setup note — hidden once configured -->
+      <div class="setup-note" id="setupNote">
+        ⚠️ <strong>EmailJS not configured yet.</strong>
+        Replace <code>YOUR_PUBLIC_KEY</code>, <code>YOUR_SERVICE_ID</code>, and <code>YOUR_TEMPLATE_ID</code>
+        in the script below. See setup instructions in the HTML comments.
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Your name</label>
+        <input class="form-input" type="text" id="formName" placeholder="xyz" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Your email</label>
+        <input class="form-input" type="email" id="formEmail" placeholder="xyz@example.com" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-textarea" id="formMessage" placeholder="Hi Sejal, I'd ..."></textarea>
+      </div>
+      <button class="form-submit" id="submitBtn" onclick="sendForm()">
+        <span class="btn-text">Send message →</span>
+        <div class="spinner"></div>
+      </button>
     </div>
-    <div class="form-group">
-      <label class="form-label">Your email</label>
-      <input class="form-input" type="email" id="formEmail" placeholder="xyz@example.com" />
+
+    <!-- Success state -->
+    <div class="form-success" id="formSuccess">
+      <div class="form-success-icon">🌸</div>
+      <p class="form-success-title">Message sent!</p>
+      <p class="form-success-msg">Thanks for reaching out. I'll get back to you soon.</p>
     </div>
-    <div class="form-group">
-      <label class="form-label">Message</label>
-      <textarea class="form-textarea" id="formMessage" placeholder="Hi Sejal, I'd ..."></textarea>
-    </div>
-    <button class="form-submit" onclick="sendForm()">Send message →</button>
   </div>
 </div>
 
-<!-- ══════════════════ JAVASCRIPT ══════════════════ -->
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- JAVASCRIPT -->
 <script>
+  /* ════════════════════════════════════════
+     EMAILJS CONFIGURATION
+     ════════════════════════════════════════
+     SETUP STEPS:
+     1. Go to https://www.emailjs.com and create a free account
+     2. Add an Email Service (Gmail recommended) → copy the Service ID
+     3. Create an Email Template with these variables:
+          {{from_name}}   — sender's name
+          {{from_email}}  — sender's email
+          {{message}}     — the message body
+        Set "To email" in the template to: sejaldahal098@gmail.com
+     4. Go to Account → Public Key → copy it
+     5. Replace the three placeholders below with your actual values
+     ════════════════════════════════════════ */
+  const EMAILJS_PUBLIC_KEY  = 'ZoCcEG8BA17by5zGh';   // ← replace
+  const EMAILJS_SERVICE_ID  = 'service_4vj2jpg';   // ← replace
+  const EMAILJS_TEMPLATE_ID = 'template_u2gezfm';  // ← replace
+
+  // Init EmailJS
+  const emailJSReady = EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY';
+  if (emailJSReady) {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  } else {
+    // Show setup note inside the modal
+    document.addEventListener('DOMContentLoaded', () => {
+      const note = document.getElementById('setupNote');
+      if (note) note.style.display = 'block';
+    });
+  }
+
+  /* ── SEND FORM ── */
+  async function sendForm() {
+    const name    = document.getElementById('formName').value.trim();
+    const email   = document.getElementById('formEmail').value.trim();
+    const message = document.getElementById('formMessage').value.trim();
+
+    if (!name || !email || !message) {
+      showToast('Please fill in all fields.', 'error');
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showToast('Please enter a valid email.', 'error');
+      return;
+    }
+
+    if (!emailJSReady) {
+      showToast('EmailJS not configured yet — see HTML comments.', 'error');
+      return;
+    }
+
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.classList.add('loading');
+
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name:  name,
+        from_email: email,
+        message:    message,
+      });
+
+      // Show success state
+      document.getElementById('formBody').style.opacity = '0';
+      setTimeout(() => {
+        document.getElementById('formBody').style.display = 'none';
+        document.getElementById('formSuccess').classList.add('show');
+      }, 300);
+
+      // Auto-close after 3s
+      setTimeout(() => closeFormModal(), 3000);
+
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      showToast('Failed to send. Please try again.', 'error');
+      btn.disabled = false;
+      btn.classList.remove('loading');
+    }
+  }
+
+  /* ── TOAST ── */
+  function showToast(msg, type = 'success') {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.className = `toast ${type} show`;
+    setTimeout(() => t.classList.remove('show'), 3500);
+  }
+
   /* ── DATA ── */
   const PROJECTS = [
     { num:"01", title:"Virtual AI Try-On System", category:"AI/ML", description:"Uses pose estimation, segmentation, and Stable Diffusion to generate realistic clothing try-ons from text prompts and reference images.", tech:["Python","Stable Diffusion","OpenCV","PyTorch"], github:"https://github.com/Sejaldahal/virtual-tryon" },
@@ -931,7 +1061,6 @@
     { year:"2024 – 2025", title:"College Representative – Code for Change Kathmandu", body:"Worked as a document lead, organized workshops, events, and hackathons to promote coding and social impact projects among students." },
   ];
 
-  // ⚠️ Replace placeholder image paths with your actual relative paths after copying photos folder
   const CERTIFICATES = [
     { title:"Data Science Course", issuer:"Khwopa College of Engineering", year:"2024", image:"photos/Data science.jpeg" },
     { title:"Deep Learning with Python", issuer:"Khwopa College of Engineering", year:"2025", image:"photos/Deeplearning with python.jpeg" },
@@ -969,7 +1098,6 @@
         </a>
       </div>
     `).join('');
-    // Trigger animation
     requestAnimationFrame(() => {
       grid.querySelectorAll('.proj-card').forEach(c => { c.style.opacity='1'; c.style.transform='translateY(0)'; });
     });
@@ -998,7 +1126,7 @@
   function renderCerts() {
     document.getElementById('certsList').innerHTML = CERTIFICATES.map((c, i) => `
       <div class="cert-card" onclick="openLightbox('${c.image}','${c.title}','${c.issuer} · ${c.year}')" style="transition-delay:${i*70}ms">
-        ${c.image ? `<img src="${c.image}" alt="${c.title}" class="cert-thumb" onerror="this.parentElement.querySelector('.cert-thumb-placeholder')&&(this.style.display='none')" />` : '<div class="cert-thumb-placeholder">🎓</div>'}
+        ${c.image ? `<img src="${c.image}" alt="${c.title}" class="cert-thumb" />` : '<div class="cert-thumb-placeholder">🎓</div>'}
         <div class="cert-info">
           <div><p class="cert-name">${c.title}</p><p class="cert-by">${c.issuer}</p></div>
           <span class="cert-yr">${c.year}</span>
@@ -1035,7 +1163,11 @@
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 30);
   });
-  function scrollTo(id) { document.getElementById(id)?.scrollIntoView({ behavior:'smooth' }); }
+  function scrollToSection(id) {
+    const target = document.getElementById(id);
+    if (!target) return;
+    target.scrollIntoView({ behavior:'smooth', block:'start' });
+  }
   function toggleMobileNav() { document.getElementById('mobileDrawer').classList.toggle('open'); }
   function closeMobileNav() { document.getElementById('mobileDrawer').classList.remove('open'); }
 
@@ -1047,7 +1179,6 @@
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.classList.add('vis');
-        // Also trigger tl-items inside
         e.target.querySelectorAll('.tl-item').forEach(t => t.classList.add('vis'));
         revObs.unobserve(e.target);
       }
@@ -1070,17 +1201,17 @@
   function closeHackOverlay() { document.getElementById('hackOverlay').classList.remove('open'); document.body.style.overflow=''; }
 
   /* ── CONTACT FORM MODAL ── */
-  function openFormModal() { document.getElementById('formModal').classList.add('open'); }
-  function closeFormModal() { document.getElementById('formModal').classList.remove('open'); }
-  function sendForm() {
-    const name = document.getElementById('formName').value;
-    const email = document.getElementById('formEmail').value;
-    const msg = document.getElementById('formMessage').value;
-    const subject = encodeURIComponent(`Message from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
-    window.location.href = `mailto:sejaldahal098@gmail.com?subject=${subject}&body=${body}`;
-    closeFormModal();
+  function openFormModal() {
+    // Reset state
+    document.getElementById('formBody').style.display = '';
+    document.getElementById('formBody').style.opacity = '1';
+    document.getElementById('formSuccess').classList.remove('show');
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = false;
+    btn.classList.remove('loading');
+    document.getElementById('formModal').classList.add('open');
   }
+  function closeFormModal() { document.getElementById('formModal').classList.remove('open'); }
 
   /* ── INIT ── */
   renderProjects('All');
