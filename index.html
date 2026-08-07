@@ -1013,29 +1013,28 @@
     btn.classList.add('loading');
 
     try {
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-        from_name:  name,
-        from_email: email,
-        message:    message,
-      });
+  await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+    name: name,
+    email: email,
+    message: message,
+  });
 
-      // Show success state
-      document.getElementById('formBody').style.opacity = '0';
-      setTimeout(() => {
-        document.getElementById('formBody').style.display = 'none';
-        document.getElementById('formSuccess').classList.add('show');
-      }, 300);
+  // Show success state
+  document.getElementById('formBody').style.opacity = '0';
+  setTimeout(() => {
+    document.getElementById('formBody').style.display = 'none';
+    document.getElementById('formSuccess').classList.add('show');
+  }, 300);
 
-      // Auto-close after 3s
-      setTimeout(() => closeFormModal(), 3000);
+  // Auto-close after 3s
+  setTimeout(() => closeFormModal(), 3000);
 
-    } catch (err) {
-      console.error('EmailJS error:', err);
-      showToast('Failed to send. Please try again.', 'error');
-      btn.disabled = false;
-      btn.classList.remove('loading');
-    }
-  }
+} catch (err) {
+  console.error('EmailJS error:', err);
+  showToast('Failed to send. Please try again.', 'error');
+  btn.disabled = false;
+  btn.classList.remove('loading');
+}
 
   /* ── TOAST ── */
   function showToast(msg, type = 'success') {
