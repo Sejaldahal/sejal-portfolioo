@@ -1058,7 +1058,7 @@
   const EXPERIENCE = [
     {year:"2026 - present",title:"AI Fellowship",body:"Participating in an AI fellowship program provided by Fusemachines, focusing on advanced AI research and development projects."},
     { year:"2026 – Present", title:"Data Camp Fellowship", body:"Digital fellowship program focused on advancing data science skills through real-world projects, mentorship, and community engagement." },
-    { year:"2025 – 2025", title:"AI/Python Developer Intern", body:"Completed a month internship at IT together company where I learnt and built a RAG System." },
+    { year:"2025 – 2026", title:"Data science with python Intern", body:"Worked on Python-based AI and data-driven applications, including data preprocessing, analysis, visualization, and Retrieval-Augmented Generation (RAG) systems. Gained practical experience applying Python and machine learning techniques to real-world datasets and AI solutions.", certificateUrl: "https://github.com/Sejaldahal/certificates/blob/main/internship/Sejal%20Dahal.pdf" },
     { year:"2024 – 2025", title:"College Representative – Code for Change Kathmandu", body:"Worked as a document lead, organized workshops, events, and hackathons to promote coding and social impact projects among students." },
   ];
 
@@ -1118,6 +1118,7 @@
         <div>
           <div class="tl-title">${e.title}</div>
           <div class="tl-body">${e.body}</div>
+          ${e.certificateUrl ? `<p style="margin-top:8px;"><a href="${e.certificateUrl}" target="_blank" class="proj-link">View certificate →</a></p>` : ''}
         </div>
       </div>
     `).join('');
